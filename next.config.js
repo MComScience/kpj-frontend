@@ -21,7 +21,7 @@ module.exports = withImages()
 module.exports = withCSS({
   distDir: "build",
   // cssModules: true,
-  assetPrefix: isProd ? "http://192.168.1.2:8081" : "",
+  // assetPrefix: isProd ? "http://192.168.1.2:8081" : "",
   webpack: (config, { isServer }) => {
     if (isServer) {
       const antStyles = /antd\/.*?\/style\/css.*?/
