@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "THSarabunNew";
+  src: url("../fonts/thsarabunnew-webfont.eot");
+  src: url("../fonts/thsarabunnew-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/thsarabunnew-webfont.woff") format("woff"),
+    url("../fonts/thsarabunnew-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "THSarabunNew";
+  src: url("../fonts/thsarabunnew_bolditalic-webfont.eot");
+  src: url("../fonts/thsarabunnew_bolditalic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/thsarabunnew_bolditalic-webfont.woff") format("woff"),
+    url("../fonts/thsarabunnew_bolditalic-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "THSarabunNew";
+  src: url("../fonts/thsarabunnew_italic-webfont.eot");
+  src: url("../fonts/thsarabunnew_italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/thsarabunnew_italic-webfont.woff") format("woff"),
+    url("../fonts/thsarabunnew_italic-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "THSarabunNew";
+  src: url("../fonts/thsarabunnew_bold-webfont.eot");
+  src: url("../fonts/thsarabunnew_bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/thsarabunnew_bold-webfont.woff") format("woff"),
+    url("../fonts/thsarabunnew_bold-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@media print {
+  /* body {
+    font-family: 'THSarabunNew', sans-serif;
+    -webkit-print-color-adjust: exact;
+    margin: 0px;
+  } */
+  .color {
+    color: black !important;
+  }
+  .x_content .head_left {
+    background: #3d3d3d !important;
+    border: 1px solid #2f2f2f !important;
+  }
+  .x_content .text-head1 {
+    color: #ffffff !important;
+  }
+  .x_content .text-head2 {
+    color: #ffffff !important;
+  }
+  .x_content .color {
+    color: #5a5a5a !important;
+  }
+  .x_content .bg-col {
+    background-color: #f5f5f5 !important;
+  }
+  .x_content th {
+    font-size: 13px !important;
+    color: #5a5a5a !important;
+  }
+  .x_content td {
+    font-size: 13px !important;
+    color: #5a5a5a !important;
+  }
+  .x_content p {
+    font-size: 13px !important;
+    color: #5a5a5a !important;
+  }
+  .x_content b {
+    color: black !important;
+    font-weight: bold;
+  }
+}
+.x_content,
+h6 h5 h4 h3 h2 h1 {
+  font-family: "THSarabunNew", sans-serif !important;
+}
+.x_content p {
+  font-family: "THSarabunNew", sans-serif !important;
+  font-size: 13px !important;
+  color: #5a5a5a !important;
+}
+.x_content th {
+  font-size: 13px !important;
+  color: #5a5a5a !important;
+}
+.x_content td {
+  font-size: 12px !important;
+  color: #5a5a5a !important;
+}
+.x_content table {
+  vertical-align: baseline;
+  line-height: 0.3;
+}
+.x_content tr {
+  vertical-align: baseline;
+  line-height: 0.3;
+}
+.x_content th {
+  vertical-align: baseline;
+  line-height: 0.3;
+}
+.x_content td {
+  vertical-align: baseline;
+  line-height: 0.3;
+}
+
+.x_content b {
+  font-weight: normal;
+  color: black !important;
+}
+
+.div-print {
+  width: 690px;
+  height: 480px;
+  margin-top: 23px;
+  margin-right: 15px;
+  margin-left: 15px;
+  border: 1px solid #d8d8d8;
+  /*background-image: url("back-print.png");*/
+}
+.x_content .div-1 {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+.x_content .div-2 {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+.x_content .div-3 {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+.x_content .div-4 {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+.x_content .div-5 {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.x_content .button {
+  margin-right: 5px;
+  padding-right: 19px;
+  padding-left: 19px;
+  display: inline-block;
+  background-color: #676767;
+  border: 1px solid #777;
+  font: bold 1em/2em Arial, Helvetica;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 0.2em;
+}
+
+.x_content .button:hover {
+  color: #777;
+  background-color: #ffffff;
+}
+.x_content {
+  /*width: 80mm;*/
+  margin: auto;
+}
