@@ -13,6 +13,7 @@ import KioskForm from "../../components/kiosk/KioskForm"
 import KioskHeader from "../../components/kiosk/KioskHeader"
 import KioskPrintTemplate from "../../components/kiosk/KioskPrintTemplate"
 import Aux from "../../hoc/Auxiliary"
+import portlet from "../../public/assets/css/kt-portlet.css"
 import boyImg from "../../static/images/boy.png"
 moment.locale("th")
 
@@ -423,8 +424,10 @@ class Kiosk extends Component {
         {this.state.isPrintting ? (
           <div className="kt-quick-panel-overlay"></div>
         ) : null}
+        <style jsx global>
+          {portlet}
+        </style>
         <style jsx global>{`
-          @import url("/static/dist/css/kt-portlet.css");
           /* @import url("/static/dist/css/style.bundle.css"); */
           html,
           body,
@@ -1031,7 +1034,10 @@ class Kiosk extends Component {
             -ms-flex-line-pack: flex-first;
             align-content: flex-first;
           }
-          .kt-portlet .kt-portlet__head .kt-portlet__head-label .kt-portlet__head-title {
+          .kt-portlet
+            .kt-portlet__head
+            .kt-portlet__head-label
+            .kt-portlet__head-title {
             margin: 0;
             padding: 0;
             font-size: 1.2rem;
@@ -1048,7 +1054,10 @@ class Kiosk extends Component {
             font-size: 1rem;
             color: #74788d;
           }
-          .kt-portlet .kt-portlet__head .kt-portlet__head-label .kt-portlet__head-icon {
+          .kt-portlet
+            .kt-portlet__head
+            .kt-portlet__head-label
+            .kt-portlet__head-icon {
             padding-right: 0.75rem;
             font-size: 1.3rem;
             color: #74788d;
@@ -1096,15 +1105,18 @@ class Kiosk extends Component {
             height: 50px;
             min-height: 50px;
           }
-          .kt-portlet.kt-portlet--sticky > .kt-portlet__head.kt-portlet__head--sm {
+          .kt-portlet.kt-portlet--sticky
+            > .kt-portlet__head.kt-portlet__head--sm {
             height: 40px;
             min-height: 40px;
           }
-          .kt-portlet.kt-portlet--sticky > .kt-portlet__head.kt-portlet__head--lg {
+          .kt-portlet.kt-portlet--sticky
+            > .kt-portlet__head.kt-portlet__head--lg {
             height: 70px;
             min-height: 70px;
           }
-          .kt-portlet.kt-portlet--sticky > .kt-portlet__head.kt-portlet__head--xl {
+          .kt-portlet.kt-portlet--sticky
+            > .kt-portlet__head.kt-portlet__head--xl {
             height: 90px;
             min-height: 90px;
           }
@@ -1117,22 +1129,28 @@ class Kiosk extends Component {
           .kt-portlet.kt-portlet--head-overlay .kt-portlet__body {
             margin-top: -60px;
           }
-          .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-sm .kt-portlet__head {
+          .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-sm
+            .kt-portlet__head {
             height: 50px;
           }
-          .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-sm .kt-portlet__body {
+          .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-sm
+            .kt-portlet__body {
             margin-top: -50px;
           }
-          .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-lg .kt-portlet__head {
+          .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-lg
+            .kt-portlet__head {
             height: 80px;
           }
-          .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-lg .kt-portlet__body {
+          .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-lg
+            .kt-portlet__body {
             margin-top: -80px;
           }
-          .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-xl .kt-portlet__head {
+          .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-xl
+            .kt-portlet__head {
             height: 100px;
           }
-          .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-xl .kt-portlet__body {
+          .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-xl
+            .kt-portlet__body {
             margin-top: -100px;
           }
           .kt-portlet .kt-portlet__body {
@@ -1195,7 +1213,8 @@ class Kiosk extends Component {
             background-color: #f7f8fa;
             border-top: 0;
           }
-          .kt-portlet .kt-portlet__foot.kt-portlet__foot--solid.kt-portlet__foot--top {
+          .kt-portlet
+            .kt-portlet__foot.kt-portlet__foot--solid.kt-portlet__foot--top {
             border-bottom: 0;
           }
           .kt-portlet .kt-portlet__separator {
@@ -1292,7 +1311,8 @@ class Kiosk extends Component {
             -ms-flex-align: stretch;
             align-items: stretch;
           }
-          .kt-portlet.kt-portlet--fit.kt-portlet--height-fluid-half .kt-portlet__body {
+          .kt-portlet.kt-portlet--fit.kt-portlet--height-fluid-half
+            .kt-portlet__body {
             height: 100%;
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
@@ -1345,7 +1365,9 @@ class Kiosk extends Component {
           .kt-portlet.kt-portlet--head-noborder .kt-portlet__body {
             padding-top: 12.5px;
           }
-          .kt-portlet.kt-portlet--tabs .kt-portlet__head .kt-portlet__head-toolbar {
+          .kt-portlet.kt-portlet--tabs
+            .kt-portlet__head
+            .kt-portlet__head-toolbar {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -1356,7 +1378,9 @@ class Kiosk extends Component {
           .kt-portlet.kt-portlet--tabs-border-3x .kt-portlet__head {
             border-bottom: 3px solid #f7f8fa;
           }
-          .kt-portlet.kt-portlet--tabs-border-3x .kt-portlet__head .nav.nav-tabs {
+          .kt-portlet.kt-portlet--tabs-border-3x
+            .kt-portlet__head
+            .nav.nav-tabs {
             margin-bottom: -3px;
           }
           .kt-portlet.kt-portlet--solid-brand {
@@ -1366,7 +1390,9 @@ class Kiosk extends Component {
             color: #ffffff;
             border-bottom: 1px solid transparent;
           }
-          .kt-portlet.kt-portlet--solid-brand .kt-portlet__head .kt-portlet__head-title {
+          .kt-portlet.kt-portlet--solid-brand
+            .kt-portlet__head
+            .kt-portlet__head-title {
             color: #ffffff;
           }
           .kt-portlet.kt-portlet--solid-brand
@@ -1375,7 +1401,10 @@ class Kiosk extends Component {
             small {
             color: #f0f0f0;
           }
-          .kt-portlet.kt-portlet--solid-brand .kt-portlet__head .kt-portlet__head-icon i {
+          .kt-portlet.kt-portlet--solid-brand
+            .kt-portlet__head
+            .kt-portlet__head-icon
+            i {
             color: #f0f0f0;
           }
           .kt-portlet.kt-portlet--solid-brand .kt-portlet__body {
@@ -1403,7 +1432,9 @@ class Kiosk extends Component {
             color: #282a3c;
             border-bottom: 1px solid transparent;
           }
-          .kt-portlet.kt-portlet--solid-light .kt-portlet__head .kt-portlet__head-title {
+          .kt-portlet.kt-portlet--solid-light
+            .kt-portlet__head
+            .kt-portlet__head-title {
             color: #282a3c;
           }
           .kt-portlet.kt-portlet--solid-light
@@ -1412,7 +1443,10 @@ class Kiosk extends Component {
             small {
             color: #1c1d2a;
           }
-          .kt-portlet.kt-portlet--solid-light .kt-portlet__head .kt-portlet__head-icon i {
+          .kt-portlet.kt-portlet--solid-light
+            .kt-portlet__head
+            .kt-portlet__head-icon
+            i {
             color: #1c1d2a;
           }
           .kt-portlet.kt-portlet--solid-light .kt-portlet__body {
@@ -1440,7 +1474,9 @@ class Kiosk extends Component {
             color: #ffffff;
             border-bottom: 1px solid transparent;
           }
-          .kt-portlet.kt-portlet--solid-dark .kt-portlet__head .kt-portlet__head-title {
+          .kt-portlet.kt-portlet--solid-dark
+            .kt-portlet__head
+            .kt-portlet__head-title {
             color: #ffffff;
           }
           .kt-portlet.kt-portlet--solid-dark
@@ -1449,7 +1485,10 @@ class Kiosk extends Component {
             small {
             color: #f0f0f0;
           }
-          .kt-portlet.kt-portlet--solid-dark .kt-portlet__head .kt-portlet__head-icon i {
+          .kt-portlet.kt-portlet--solid-dark
+            .kt-portlet__head
+            .kt-portlet__head-icon
+            i {
             color: #f0f0f0;
           }
           .kt-portlet.kt-portlet--solid-dark .kt-portlet__body {
@@ -1561,7 +1600,9 @@ class Kiosk extends Component {
             color: #ffffff;
             border-bottom: 1px solid transparent;
           }
-          .kt-portlet.kt-portlet--solid-info .kt-portlet__head .kt-portlet__head-title {
+          .kt-portlet.kt-portlet--solid-info
+            .kt-portlet__head
+            .kt-portlet__head-title {
             color: #ffffff;
           }
           .kt-portlet.kt-portlet--solid-info
@@ -1570,7 +1611,10 @@ class Kiosk extends Component {
             small {
             color: #f0f0f0;
           }
-          .kt-portlet.kt-portlet--solid-info .kt-portlet__head .kt-portlet__head-icon i {
+          .kt-portlet.kt-portlet--solid-info
+            .kt-portlet__head
+            .kt-portlet__head-icon
+            i {
             color: #f0f0f0;
           }
           .kt-portlet.kt-portlet--solid-info .kt-portlet__body {
@@ -1640,7 +1684,9 @@ class Kiosk extends Component {
             color: #ffffff;
             border-bottom: 1px solid transparent;
           }
-          .kt-portlet.kt-portlet--solid-danger .kt-portlet__head .kt-portlet__head-title {
+          .kt-portlet.kt-portlet--solid-danger
+            .kt-portlet__head
+            .kt-portlet__head-title {
             color: #ffffff;
           }
           .kt-portlet.kt-portlet--solid-danger
@@ -1795,7 +1841,9 @@ class Kiosk extends Component {
           .kt-portlet.kt-portlet--head-noborder .kt-portlet__body {
             padding-top: 12.5px;
           }
-          .kt-portlet.kt-portlet--tabs .kt-portlet__head .kt-portlet__head-toolbar {
+          .kt-portlet.kt-portlet--tabs
+            .kt-portlet__head
+            .kt-portlet__head-toolbar {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -1806,7 +1854,9 @@ class Kiosk extends Component {
           .kt-portlet.kt-portlet--tabs-border-3x .kt-portlet__head {
             border-bottom: 3px solid #f7f8fa;
           }
-          .kt-portlet.kt-portlet--tabs-border-3x .kt-portlet__head .nav.nav-tabs {
+          .kt-portlet.kt-portlet--tabs-border-3x
+            .kt-portlet__head
+            .nav.nav-tabs {
             margin-bottom: -3px;
           }
           .kt-portlet.kt-portlet--solid-brand {
@@ -1816,7 +1866,9 @@ class Kiosk extends Component {
             color: #ffffff;
             border-bottom: 1px solid transparent;
           }
-          .kt-portlet.kt-portlet--solid-brand .kt-portlet__head .kt-portlet__head-title {
+          .kt-portlet.kt-portlet--solid-brand
+            .kt-portlet__head
+            .kt-portlet__head-title {
             color: #ffffff;
           }
           .kt-portlet.kt-portlet--solid-brand
@@ -1825,7 +1877,10 @@ class Kiosk extends Component {
             small {
             color: #f0f0f0;
           }
-          .kt-portlet.kt-portlet--solid-brand .kt-portlet__head .kt-portlet__head-icon i {
+          .kt-portlet.kt-portlet--solid-brand
+            .kt-portlet__head
+            .kt-portlet__head-icon
+            i {
             color: #f0f0f0;
           }
           .kt-portlet.kt-portlet--solid-brand .kt-portlet__body {
@@ -1853,7 +1908,9 @@ class Kiosk extends Component {
             color: #282a3c;
             border-bottom: 1px solid transparent;
           }
-          .kt-portlet.kt-portlet--solid-light .kt-portlet__head .kt-portlet__head-title {
+          .kt-portlet.kt-portlet--solid-light
+            .kt-portlet__head
+            .kt-portlet__head-title {
             color: #282a3c;
           }
           .kt-portlet.kt-portlet--solid-light
@@ -1862,7 +1919,10 @@ class Kiosk extends Component {
             small {
             color: #1c1d2a;
           }
-          .kt-portlet.kt-portlet--solid-light .kt-portlet__head .kt-portlet__head-icon i {
+          .kt-portlet.kt-portlet--solid-light
+            .kt-portlet__head
+            .kt-portlet__head-icon
+            i {
             color: #1c1d2a;
           }
           .kt-portlet.kt-portlet--solid-light .kt-portlet__body {
@@ -1890,7 +1950,9 @@ class Kiosk extends Component {
             color: #ffffff;
             border-bottom: 1px solid transparent;
           }
-          .kt-portlet.kt-portlet--solid-dark .kt-portlet__head .kt-portlet__head-title {
+          .kt-portlet.kt-portlet--solid-dark
+            .kt-portlet__head
+            .kt-portlet__head-title {
             color: #ffffff;
           }
           .kt-portlet.kt-portlet--solid-dark
@@ -1899,7 +1961,10 @@ class Kiosk extends Component {
             small {
             color: #f0f0f0;
           }
-          .kt-portlet.kt-portlet--solid-dark .kt-portlet__head .kt-portlet__head-icon i {
+          .kt-portlet.kt-portlet--solid-dark
+            .kt-portlet__head
+            .kt-portlet__head-icon
+            i {
             color: #f0f0f0;
           }
           .kt-portlet.kt-portlet--solid-dark .kt-portlet__body {
@@ -2011,7 +2076,9 @@ class Kiosk extends Component {
             color: #ffffff;
             border-bottom: 1px solid transparent;
           }
-          .kt-portlet.kt-portlet--solid-info .kt-portlet__head .kt-portlet__head-title {
+          .kt-portlet.kt-portlet--solid-info
+            .kt-portlet__head
+            .kt-portlet__head-title {
             color: #ffffff;
           }
           .kt-portlet.kt-portlet--solid-info
@@ -2020,7 +2087,10 @@ class Kiosk extends Component {
             small {
             color: #f0f0f0;
           }
-          .kt-portlet.kt-portlet--solid-info .kt-portlet__head .kt-portlet__head-icon i {
+          .kt-portlet.kt-portlet--solid-info
+            .kt-portlet__head
+            .kt-portlet__head-icon
+            i {
             color: #f0f0f0;
           }
           .kt-portlet.kt-portlet--solid-info .kt-portlet__body {
@@ -2090,7 +2160,9 @@ class Kiosk extends Component {
             color: #ffffff;
             border-bottom: 1px solid transparent;
           }
-          .kt-portlet.kt-portlet--solid-danger .kt-portlet__head .kt-portlet__head-title {
+          .kt-portlet.kt-portlet--solid-danger
+            .kt-portlet__head
+            .kt-portlet__head-title {
             color: #ffffff;
           }
           .kt-portlet.kt-portlet--solid-danger
@@ -2205,11 +2277,11 @@ class Kiosk extends Component {
             .la-plus:before {
             content: "\f28e";
           }
-          
+
           .tooltip-portlet {
             opacity: 1;
           }
-          
+
           @media (min-width: 1025px) {
             .kt-portlet.kt-portlet--height-fluid {
               height: calc(100% - 20px);
@@ -2228,7 +2300,7 @@ class Kiosk extends Component {
               flex-grow: 1;
             }
           }
-          
+
           @media (max-width: 1024px) {
             .kt-portlet {
               margin-bottom: 20px;
@@ -2271,13 +2343,16 @@ class Kiosk extends Component {
             .kt-portlet.kt-portlet--sticky > .kt-portlet__head {
               height: 40px;
             }
-            .kt-portlet.kt-portlet--sticky > .kt-portlet__head.kt-portlet__head--sm {
+            .kt-portlet.kt-portlet--sticky
+              > .kt-portlet__head.kt-portlet__head--sm {
               height: 30px;
             }
-            .kt-portlet.kt-portlet--sticky > .kt-portlet__head.kt-portlet__head--lg {
+            .kt-portlet.kt-portlet--sticky
+              > .kt-portlet__head.kt-portlet__head--lg {
               height: 50px;
             }
-            .kt-portlet.kt-portlet--sticky > .kt-portlet__head.kt-portlet__head--xl {
+            .kt-portlet.kt-portlet--sticky
+              > .kt-portlet__head.kt-portlet__head--xl {
               height: 70px;
             }
             .kt-portlet.kt-portlet--head-overlay .kt-portlet__head {
@@ -2286,22 +2361,28 @@ class Kiosk extends Component {
             .kt-portlet.kt-portlet--head-overlay .kt-portlet__body {
               margin-top: -50px;
             }
-            .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-sm .kt-portlet__head {
+            .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-sm
+              .kt-portlet__head {
               height: 40px;
             }
-            .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-sm .kt-portlet__body {
+            .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-sm
+              .kt-portlet__body {
               margin-top: -40px;
             }
-            .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-lg .kt-portlet__head {
+            .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-lg
+              .kt-portlet__head {
               height: 60px;
             }
-            .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-lg .kt-portlet__body {
+            .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-lg
+              .kt-portlet__body {
               margin-top: -60px;
             }
-            .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-xl .kt-portlet__head {
+            .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-xl
+              .kt-portlet__head {
               height: 80px;
             }
-            .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-xl .kt-portlet__body {
+            .kt-portlet.kt-portlet--head-overlay.kt-portlet--head-xl
+              .kt-portlet__body {
               margin-top: -80px;
             }
             .kt-portlet.kt-portlet--head--noborder .kt-portlet__body {
@@ -2316,7 +2397,7 @@ class Kiosk extends Component {
               padding-bottom: 15px !important;
             }
           }
-          
+
           @media (max-width: 768px) {
             .kt-portlet.kt-portlet--head-break-sm .kt-portlet__head {
               padding-top: 15px;
@@ -2428,7 +2509,9 @@ class Kiosk extends Component {
             .kt-widget__pic.kt-widget__pic--danger {
             background: rgba(253, 39, 235, 0.1);
           }
-          .kt-widget.kt-widget--user-profile-2 .kt-widget__head .kt-widget__info {
+          .kt-widget.kt-widget--user-profile-2
+            .kt-widget__head
+            .kt-widget__info {
             padding-left: 1rem;
           }
           .kt-widget.kt-widget--user-profile-2
@@ -2478,15 +2561,22 @@ class Kiosk extends Component {
             -ms-flex: 1;
             flex: 1;
           }
-          .kt-widget.kt-widget--user-profile-2 .kt-widget__body .kt-widget__section {
+          .kt-widget.kt-widget--user-profile-2
+            .kt-widget__body
+            .kt-widget__section {
             padding: 1rem 0 1rem 0;
             color: #595d6e;
             font-weight: 400;
           }
-          .kt-widget.kt-widget--user-profile-2 .kt-widget__body .kt-widget__section a {
+          .kt-widget.kt-widget--user-profile-2
+            .kt-widget__body
+            .kt-widget__section
+            a {
             padding-right: 0.3rem;
           }
-          .kt-widget.kt-widget--user-profile-2 .kt-widget__body .kt-widget__content {
+          .kt-widget.kt-widget--user-profile-2
+            .kt-widget__body
+            .kt-widget__content {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -2545,7 +2635,9 @@ class Kiosk extends Component {
             font-weight: 600;
             font-size: 1.2rem;
           }
-          .kt-widget.kt-widget--user-profile-2 .kt-widget__body .kt-widget__item {
+          .kt-widget.kt-widget--user-profile-2
+            .kt-widget__body
+            .kt-widget__item {
             padding: 0.7rem 0;
           }
           .kt-widget.kt-widget--user-profile-2
@@ -2603,7 +2695,7 @@ class Kiosk extends Component {
             padding: 1.1rem 0;
             width: 100%;
           }
-          
+
           @media (max-width: 768px) {
             .kt-widget.kt-widget--user-profile-2 .kt-widget__head {
               margin-top: -30px;
@@ -2627,7 +2719,7 @@ class Kiosk extends Component {
           .kt-hide {
             display: none !important;
           }
-          
+
           /* widget */
           .kt-widget1 {
             padding: 25px;
@@ -2675,13 +2767,13 @@ class Kiosk extends Component {
           .kt-widget1 .kt-widget1__item:last-child {
             border-bottom: 0;
           }
-          
+
           @media (max-width: 1024px) {
             .kt-widget1 {
               padding: 15px;
             }
           }
-          
+
           .kt-widget2 .kt-widget2__item {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -2726,19 +2818,28 @@ class Kiosk extends Component {
             -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease;
           }
-          .kt-widget2 .kt-widget2__item .kt-widget2__info .kt-widget2__title:hover {
+          .kt-widget2
+            .kt-widget2__item
+            .kt-widget2__info
+            .kt-widget2__title:hover {
             color: #22b9ff;
             -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease;
           }
-          .kt-widget2 .kt-widget2__item .kt-widget2__info .kt-widget2__username {
+          .kt-widget2
+            .kt-widget2__item
+            .kt-widget2__info
+            .kt-widget2__username {
             text-decoration: none;
             font-size: 0.9rem;
             color: #74788d;
             -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease;
           }
-          .kt-widget2 .kt-widget2__item .kt-widget2__info .kt-widget2__username:hover {
+          .kt-widget2
+            .kt-widget2__item
+            .kt-widget2__info
+            .kt-widget2__username:hover {
             text-decoration: none;
             color: #22b9ff;
             -webkit-transition: color 0.3s ease;
@@ -2781,7 +2882,7 @@ class Kiosk extends Component {
           .kt-widget2 .kt-widget2__item.kt-widget2__item--danger:before {
             background: #fd27eb;
           }
-          
+
           .kt-widget3 .kt-widget3__item {
             margin-bottom: 1rem;
             border-bottom: 0.07rem dashed #ebedf2;
@@ -2838,7 +2939,10 @@ class Kiosk extends Component {
             font-weight: 400;
             color: #74788d;
           }
-          .kt-widget3 .kt-widget3__item .kt-widget3__header .kt-widget3__status {
+          .kt-widget3
+            .kt-widget3__item
+            .kt-widget3__header
+            .kt-widget3__status {
             font-weight: 500;
             -webkit-box-flex: 1;
             -ms-flex-positive: 1;
@@ -2854,7 +2958,7 @@ class Kiosk extends Component {
           .kt-widget3 .kt-widget3__item:first-child .kt-widget3__header {
             margin-top: 0;
           }
-          
+
           .kt-widget4 .kt-widget4__item {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -2876,16 +2980,28 @@ class Kiosk extends Component {
             width: 2.5rem;
             border-radius: 4px;
           }
-          .kt-widget4 .kt-widget4__item .kt-widget4__pic.kt-widget4__pic--sm img {
+          .kt-widget4
+            .kt-widget4__item
+            .kt-widget4__pic.kt-widget4__pic--sm
+            img {
             width: 2.5rem;
           }
-          .kt-widget4 .kt-widget4__item .kt-widget4__pic.kt-widget4__pic--lg img {
+          .kt-widget4
+            .kt-widget4__item
+            .kt-widget4__pic.kt-widget4__pic--lg
+            img {
             width: 3.5rem;
           }
-          .kt-widget4 .kt-widget4__item .kt-widget4__pic.kt-widget4__pic--xl img {
+          .kt-widget4
+            .kt-widget4__item
+            .kt-widget4__pic.kt-widget4__pic--xl
+            img {
             width: 4rem;
           }
-          .kt-widget4 .kt-widget4__item .kt-widget4__pic.kt-widget4__pic--circle img {
+          .kt-widget4
+            .kt-widget4__item
+            .kt-widget4__pic.kt-widget4__pic--circle
+            img {
             border-radius: 50%;
           }
           .kt-widget4 .kt-widget4__item .kt-widget4__img {
@@ -2904,14 +3020,20 @@ class Kiosk extends Component {
             -ms-flex-positive: 1;
             flex-grow: 1;
           }
-          .kt-widget4 .kt-widget4__item .kt-widget4__info .kt-widget4__username {
+          .kt-widget4
+            .kt-widget4__item
+            .kt-widget4__info
+            .kt-widget4__username {
             font-weight: 500;
             font-size: 1rem;
             color: #595d6e;
             -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease;
           }
-          .kt-widget4 .kt-widget4__item .kt-widget4__info .kt-widget4__username:hover {
+          .kt-widget4
+            .kt-widget4__item
+            .kt-widget4__info
+            .kt-widget4__username:hover {
             color: #22b9ff;
             -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease;
@@ -2937,7 +3059,9 @@ class Kiosk extends Component {
             -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease;
           }
-          .kt-widget4 .kt-widget4__item .kt-widget4__title.kt-widget4__title--light {
+          .kt-widget4
+            .kt-widget4__item
+            .kt-widget4__title.kt-widget4__title--light {
             font-weight: 400;
           }
           .kt-widget4 .kt-widget4__item .kt-widget4__title:hover {
@@ -2962,7 +3086,10 @@ class Kiosk extends Component {
             text-align: right;
             color: #74788d;
           }
-          .kt-widget4 .kt-widget4__item .kt-widget4__icon.kt-widget4__icon--2x > i {
+          .kt-widget4
+            .kt-widget4__item
+            .kt-widget4__icon.kt-widget4__icon--2x
+            > i {
             font-size: 2.2rem;
           }
           .kt-widget4 .kt-widget4__item:first-child {
@@ -2972,7 +3099,7 @@ class Kiosk extends Component {
             padding-bottom: 0;
             border-bottom: 0;
           }
-          
+
           .kt-widget4.kt-widget4--progress .kt-widget4__content {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -2985,7 +3112,9 @@ class Kiosk extends Component {
             align-items: center;
             width: 50%;
           }
-          .kt-widget4.kt-widget4--progress .kt-widget4__content .kt-widget4__progress {
+          .kt-widget4.kt-widget4--progress
+            .kt-widget4__content
+            .kt-widget4__progress {
             -webkit-box-flex: 1;
             -ms-flex: 1;
             flex: 1;
@@ -3037,11 +3166,11 @@ class Kiosk extends Component {
             .progress {
             width: 100%;
           }
-          
+
           .kt-widget4 .kt-widget4__chart {
             position: relative;
           }
-          
+
           .kt-widget4.kt-widget4--sticky {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -3058,7 +3187,8 @@ class Kiosk extends Component {
             -ms-flex-positive: 1;
             flex-grow: 1;
           }
-          .kt-widget4.kt-widget4--sticky .kt-widget4__items.kt-widget4__items--bottom {
+          .kt-widget4.kt-widget4--sticky
+            .kt-widget4__items.kt-widget4__items--bottom {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -3074,7 +3204,7 @@ class Kiosk extends Component {
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
           }
-          
+
           .kt-widget5 .kt-widget5__item {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -3100,18 +3230,28 @@ class Kiosk extends Component {
           .kt-widget5 .kt-widget5__item .kt-widget5__content .kt-widget5__pic {
             padding-right: 1.25rem;
           }
-          .kt-widget5 .kt-widget5__item .kt-widget5__content .kt-widget5__pic img {
+          .kt-widget5
+            .kt-widget5__item
+            .kt-widget5__content
+            .kt-widget5__pic
+            img {
             max-width: 8.5rem;
             border-radius: 4px;
           }
-          .kt-widget5 .kt-widget5__item .kt-widget5__content .kt-widget5__title {
+          .kt-widget5
+            .kt-widget5__item
+            .kt-widget5__content
+            .kt-widget5__title {
             font-size: 1.1rem;
             font-weight: 500;
             color: #595d6e;
             -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease;
           }
-          .kt-widget5 .kt-widget5__item .kt-widget5__content .kt-widget5__title:hover {
+          .kt-widget5
+            .kt-widget5__item
+            .kt-widget5__content
+            .kt-widget5__title:hover {
             color: #22b9ff;
             -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease;
@@ -3131,7 +3271,10 @@ class Kiosk extends Component {
             font-weight: 500;
             margin-right: 0.71rem;
           }
-          .kt-widget5 .kt-widget5__item .kt-widget5__content .kt-widget5__stats {
+          .kt-widget5
+            .kt-widget5__item
+            .kt-widget5__content
+            .kt-widget5__stats {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -3168,15 +3311,22 @@ class Kiosk extends Component {
           .kt-widget5 .kt-widget5__item:last-child {
             border-bottom: 0;
           }
-          
+
           @media (max-width: 1024px) {
             .kt-widget5 {
               padding: 1rem;
             }
-            .kt-widget5 .kt-widget5__item .kt-widget5__content .kt-widget5__pic {
+            .kt-widget5
+              .kt-widget5__item
+              .kt-widget5__content
+              .kt-widget5__pic {
               padding-right: 0.5rem;
             }
-            .kt-widget5 .kt-widget5__item .kt-widget5__content .kt-widget5__pic img {
+            .kt-widget5
+              .kt-widget5__item
+              .kt-widget5__content
+              .kt-widget5__pic
+              img {
               max-width: 4rem;
             }
             .kt-widget5
@@ -3194,7 +3344,7 @@ class Kiosk extends Component {
               padding-right: 1rem;
             }
           }
-          
+
           .kt-widget6 .kt-widget6__head .kt-widget6__item {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -3216,7 +3366,7 @@ class Kiosk extends Component {
           .kt-widget6 .kt-widget6__head .kt-widget6__item > span:last-child {
             text-align: right;
           }
-          
+
           .kt-widget6 .kt-widget6__body .kt-widget6__item {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -3242,19 +3392,19 @@ class Kiosk extends Component {
           .kt-widget6 .kt-widget6__body .kt-widget6__item:last-child {
             border-bottom: 0;
           }
-          
+
           .kt-widget6 .kt-widget6__foot .kt-widget6__action {
             text-align: right;
             margin-top: 1rem;
           }
-          
+
           .kt-widget7 .kt-widget7__desc {
             text-align: center;
             margin-top: 7rem;
             font-size: 1.3rem;
             color: #595d6e;
           }
-          
+
           .kt-widget7 .kt-widget7__content {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -3274,7 +3424,10 @@ class Kiosk extends Component {
           .kt-widget7 .kt-widget7__content .kt-widget7__info {
             padding-left: 1rem;
           }
-          .kt-widget7 .kt-widget7__content .kt-widget7__info .kt-widget7__username {
+          .kt-widget7
+            .kt-widget7__content
+            .kt-widget7__info
+            .kt-widget7__username {
             color: #595d6e;
             font-weight: 500;
             font-size: 1.4rem;
@@ -3284,25 +3437,29 @@ class Kiosk extends Component {
             color: #74788d;
             font-size: 0.9rem;
           }
-          
+
           .kt-widget7 .kt-widget7__button {
             text-align: center;
             margin-top: 2rem;
           }
-          
+
           .kt-widget7.kt-widget7--skin-light .kt-widget7__desc {
             color: #fff;
           }
-          
-          .kt-widget7.kt-widget7--skin-light .kt-widget7__info .kt-widget7__username {
+
+          .kt-widget7.kt-widget7--skin-light
+            .kt-widget7__info
+            .kt-widget7__username {
             color: #fff;
           }
-          
-          .kt-widget7.kt-widget7--skin-light .kt-widget7__info .kt-widget7__time {
+
+          .kt-widget7.kt-widget7--skin-light
+            .kt-widget7__info
+            .kt-widget7__time {
             color: #fff;
             opacity: 0.8;
           }
-          
+
           .kt-widget9 {
             padding: 2.2rem;
           }
@@ -3333,7 +3490,7 @@ class Kiosk extends Component {
             font-weight: 700;
             color: #74788d;
           }
-          
+
           .kt-widget10 .kt-widget10__chart {
             margin-top: 1rem;
             margin-bottom: 3.5rem;
@@ -3342,33 +3499,39 @@ class Kiosk extends Component {
           .kt-widget10 .kt-widget10__chart canvas {
             border-radius: 8px;
           }
-          
-          .kt-widget10 .kt-widget10__items .kt-widget10__item .kt-widget10__stats {
+
+          .kt-widget10
+            .kt-widget10__items
+            .kt-widget10__item
+            .kt-widget10__stats {
             font-size: 1.1rem;
             font-weight: 700;
             color: #74788d;
           }
-          
-          .kt-widget10 .kt-widget10__items .kt-widget10__item .kt-widget10__text {
+
+          .kt-widget10
+            .kt-widget10__items
+            .kt-widget10__item
+            .kt-widget10__text {
             font-size: 0.9rem;
             float: right;
             margin-top: 0.3rem;
             color: #74788d;
           }
-          
+
           .kt-widget10 .kt-widget10__items .kt-widget10__item .progress {
             margin-bottom: 1.6rem;
           }
-          
+
           .kt-widget10 .kt-widget10__desc {
             margin-top: 1.6rem;
             font-size: 1rem;
           }
-          
+
           .kt-widget11 .table-responsive {
             overflow-y: hidden;
           }
-          
+
           .kt-widget11 .table thead > tr > td {
             padding: 0;
             vertical-align: top;
@@ -3376,7 +3539,7 @@ class Kiosk extends Component {
             font-weight: 500;
             color: #74788d;
           }
-          
+
           .kt-widget11 .table tbody > tr {
             border-bottom: 1px dashed #ebedf2;
           }
@@ -3423,7 +3586,7 @@ class Kiosk extends Component {
           .kt-widget11 .table tbody > tr:last-child {
             border: 0;
           }
-          
+
           .kt-widget12 {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -3458,7 +3621,10 @@ class Kiosk extends Component {
             -ms-flex-align: center;
             align-items: center;
           }
-          .kt-widget12 .kt-widget12__content .kt-widget12__item .kt-widget12__info {
+          .kt-widget12
+            .kt-widget12__content
+            .kt-widget12__item
+            .kt-widget12__info {
             -webkit-box-flex: 1;
             -ms-flex: 1;
             flex: 1;
@@ -3528,7 +3694,7 @@ class Kiosk extends Component {
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
           }
-          
+
           .kt-widget13 {
             padding: 2rem 0;
           }
@@ -3552,7 +3718,9 @@ class Kiosk extends Component {
             padding-left: 1rem;
             font-weight: 400;
           }
-          .kt-widget13 .kt-widget13__item .kt-widget13__text.kt-widget13__text--bold {
+          .kt-widget13
+            .kt-widget13__item
+            .kt-widget13__text.kt-widget13__text--bold {
             color: #595d6e;
             font-size: 1.2rem;
             font-weight: 500;
@@ -3576,7 +3744,7 @@ class Kiosk extends Component {
           .kt-widget13 .kt-widget13__action .kt-widget13__action {
             border-top: 0.07rem dashed #ebedf2;
           }
-          
+
           .kt-widget14 {
             padding: 25px;
           }
@@ -3620,12 +3788,18 @@ class Kiosk extends Component {
             -ms-flex-align: center;
             align-items: center;
           }
-          .kt-widget14 .kt-widget14__legends .kt-widget14__legend .kt-widget14__bullet {
+          .kt-widget14
+            .kt-widget14__legends
+            .kt-widget14__legend
+            .kt-widget14__bullet {
             width: 1.5rem;
             height: 0.45rem;
             border-radius: 1.1rem;
           }
-          .kt-widget14 .kt-widget14__legends .kt-widget14__legend .kt-widget14__stats {
+          .kt-widget14
+            .kt-widget14__legends
+            .kt-widget14__legend
+            .kt-widget14__stats {
             color: #74788d;
             font-weight: 500;
             -webkit-box-flex: 1;
@@ -3665,7 +3839,7 @@ class Kiosk extends Component {
             position: relative;
             z-index: 1;
           }
-          
+
           @media (max-width: 1024px) {
             .kt-widget14 {
               padding: 15px;
@@ -3674,7 +3848,7 @@ class Kiosk extends Component {
               padding-left: 0.5rem;
             }
           }
-          
+
           .kt-widget15 {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -3703,12 +3877,18 @@ class Kiosk extends Component {
             -ms-flex-pack: end;
             justify-content: flex-end;
           }
-          .kt-widget15 .kt-widget15__items .kt-widget15__item .kt-widget15__stats {
+          .kt-widget15
+            .kt-widget15__items
+            .kt-widget15__item
+            .kt-widget15__stats {
             font-size: 1.1rem;
             font-weight: 500;
             color: #74788d;
           }
-          .kt-widget15 .kt-widget15__items .kt-widget15__item .kt-widget15__text {
+          .kt-widget15
+            .kt-widget15__items
+            .kt-widget15__item
+            .kt-widget15__text {
             font-size: 1rem;
             float: right;
             margin-top: 0.3rem;
@@ -3725,7 +3905,7 @@ class Kiosk extends Component {
             font-weight: 400;
             color: #74788d;
           }
-          
+
           .kt-widget16 {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -3751,23 +3931,35 @@ class Kiosk extends Component {
             padding: 0.7rem 0;
             border-bottom: 1px dashed #ebedf2;
           }
-          .kt-widget16 .kt-widget16__items .kt-widget16__item .kt-widget16__sceduled {
+          .kt-widget16
+            .kt-widget16__items
+            .kt-widget16__item
+            .kt-widget16__sceduled {
             font-weight: 500;
             color: #74788d;
             font-size: 1rem;
           }
-          .kt-widget16 .kt-widget16__items .kt-widget16__item .kt-widget16__amount {
+          .kt-widget16
+            .kt-widget16__items
+            .kt-widget16__item
+            .kt-widget16__amount {
             font-size: 1rem;
             font-weight: 500;
             color: #74788d;
             text-align: right;
           }
-          .kt-widget16 .kt-widget16__items .kt-widget16__item .kt-widget16__date {
+          .kt-widget16
+            .kt-widget16__items
+            .kt-widget16__item
+            .kt-widget16__date {
             font-size: 1rem;
             font-weight: 300;
             color: #74788d;
           }
-          .kt-widget16 .kt-widget16__items .kt-widget16__item .kt-widget16__price {
+          .kt-widget16
+            .kt-widget16__items
+            .kt-widget16__item
+            .kt-widget16__price {
             font-size: 1rem;
             font-weight: 500;
             text-align: right;
@@ -3821,7 +4013,10 @@ class Kiosk extends Component {
           .kt-widget16 .kt-widget16__stats .kt-widget16__legends:last-child {
             margin-bottom: 0;
           }
-          .kt-widget16 .kt-widget16__stats .kt-widget16__visual .kt-widget16__chart {
+          .kt-widget16
+            .kt-widget16__stats
+            .kt-widget16__visual
+            .kt-widget16__chart {
             margin-top: 0.5rem;
             position: relative;
             display: -webkit-box;
@@ -3868,7 +4063,7 @@ class Kiosk extends Component {
             position: relative;
             z-index: 1;
           }
-          
+
           @media (max-width: 768px) {
             .kt-widget16 {
               display: -webkit-box;
@@ -3889,7 +4084,7 @@ class Kiosk extends Component {
               padding-left: 1rem;
             }
           }
-          
+
           .kt-widget17 .kt-widget17__visual {
             border-top-left-radius: 4px;
             border-top-right-radius: 4px;
@@ -3898,7 +4093,7 @@ class Kiosk extends Component {
             position: relative;
             padding-top: 8rem;
           }
-          
+
           .kt-widget17 .kt-widget17__stats {
             display: column;
             margin: -4.3rem auto 0 auto;
@@ -3910,7 +4105,10 @@ class Kiosk extends Component {
             display: -ms-flexbox;
             display: flex;
           }
-          .kt-widget17 .kt-widget17__stats .kt-widget17__items .kt-widget17__item {
+          .kt-widget17
+            .kt-widget17__stats
+            .kt-widget17__items
+            .kt-widget17__item {
             padding: 2rem;
             -webkit-box-flex: 1;
             -ms-flex: 1;
@@ -3969,19 +4167,25 @@ class Kiosk extends Component {
             font-size: 1rem;
             color: #74788d;
           }
-          .kt-widget17 .kt-widget17__stats .kt-widget17__items .kt-widget17__item:hover {
+          .kt-widget17
+            .kt-widget17__stats
+            .kt-widget17__items
+            .kt-widget17__item:hover {
             -webkit-transition: all 0.3s ease;
             transition: all 0.3s ease;
             -webkit-box-shadow: 0px 1px 21px 1px rgba(69, 65, 78, 0.12);
             box-shadow: 0px 1px 21px 1px rgba(69, 65, 78, 0.12);
           }
-          
+
           @media (max-width: 768px) {
-            .kt-widget17 .kt-widget17__stats .kt-widget17__items .kt-widget17__item {
+            .kt-widget17
+              .kt-widget17__stats
+              .kt-widget17__items
+              .kt-widget17__item {
               padding-left: 0.5rem;
             }
           }
-          
+
           .kt-widget19 .kt-widget19__pic {
             border-top-left-radius: 4px;
             border-top-right-radius: 4px;
@@ -4035,7 +4239,7 @@ class Kiosk extends Component {
               left: 15px;
             }
           }
-          
+
           .kt-widget19 .kt-widget19__wrapper {
             margin-bottom: 1rem;
           }
@@ -4059,7 +4263,10 @@ class Kiosk extends Component {
             width: 3.2rem;
             border-radius: 100%;
           }
-          .kt-widget19 .kt-widget19__wrapper .kt-widget19__content .kt-widget19__info {
+          .kt-widget19
+            .kt-widget19__wrapper
+            .kt-widget19__content
+            .kt-widget19__info {
             padding-left: 1rem;
             -webkit-box-flex: 1;
             -ms-flex-positive: 1;
@@ -4101,7 +4308,10 @@ class Kiosk extends Component {
             font-weight: 400;
             color: #74788d;
           }
-          .kt-widget19 .kt-widget19__wrapper .kt-widget19__content .kt-widget19__stats {
+          .kt-widget19
+            .kt-widget19__wrapper
+            .kt-widget19__content
+            .kt-widget19__stats {
             font-size: 1rem;
             font-weight: 500;
           }
@@ -4146,11 +4356,11 @@ class Kiosk extends Component {
             font-size: 1.1rem;
             font-weight: 400;
           }
-          
+
           .kt-widget19 .kt-widget19__action {
             margin-top: 1.5rem;
           }
-          
+
           .kt-widget20 {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -4197,7 +4407,7 @@ class Kiosk extends Component {
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
           }
-          
+
           .kt-widget21 {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -4233,7 +4443,10 @@ class Kiosk extends Component {
             padding-left: 2rem;
             margin-top: 1.5rem;
           }
-          .kt-widget21 .kt-widget21__content .kt-widget21__item .kt-widget21__icon {
+          .kt-widget21
+            .kt-widget21__content
+            .kt-widget21__item
+            .kt-widget21__icon {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -4247,10 +4460,17 @@ class Kiosk extends Component {
             height: 40px;
             border-radius: 50%;
           }
-          .kt-widget21 .kt-widget21__content .kt-widget21__item .kt-widget21__icon i {
+          .kt-widget21
+            .kt-widget21__content
+            .kt-widget21__item
+            .kt-widget21__icon
+            i {
             font-size: 1.4rem;
           }
-          .kt-widget21 .kt-widget21__content .kt-widget21__item .kt-widget21__info {
+          .kt-widget21
+            .kt-widget21__content
+            .kt-widget21__item
+            .kt-widget21__info {
             padding-left: 1rem;
             -webkit-box-flex: 1;
             -ms-flex: 1;
@@ -4282,17 +4502,20 @@ class Kiosk extends Component {
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
           }
-          
+
           @media (max-width: 768px) {
             .kt-widget21 .kt-widget21__content .kt-widget21__item {
               padding-left: 0;
               margin-top: 0.5rem;
             }
-            .kt-widget21 .kt-widget21__content .kt-widget21__item .kt-widget21__info {
+            .kt-widget21
+              .kt-widget21__content
+              .kt-widget21__item
+              .kt-widget21__info {
               padding-left: 0.5rem;
             }
           }
-          
+
           .kt-widget24 {
             padding: 25px;
             -webkit-box-flex: 1;
@@ -4310,7 +4533,10 @@ class Kiosk extends Component {
             -ms-flex-align: center;
             align-items: center;
           }
-          .kt-widget24 .kt-widget24__details .kt-widget24__info .kt-widget24__title {
+          .kt-widget24
+            .kt-widget24__details
+            .kt-widget24__info
+            .kt-widget24__title {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -4328,7 +4554,10 @@ class Kiosk extends Component {
             transition: color 0.3s ease;
             color: #22b9ff;
           }
-          .kt-widget24 .kt-widget24__details .kt-widget24__info .kt-widget24__desc {
+          .kt-widget24
+            .kt-widget24__details
+            .kt-widget24__info
+            .kt-widget24__desc {
             color: #74788d;
             font-weight: 400;
           }
@@ -4361,13 +4590,13 @@ class Kiosk extends Component {
             padding: 1rem;
             border-radius: 4px;
           }
-          
+
           @media (max-width: 1024px) {
             .kt-widget24 {
               padding: 15px;
             }
           }
-          
+
           .kt-widget25 {
             margin: 2rem 0;
           }
@@ -4395,20 +4624,29 @@ class Kiosk extends Component {
             -ms-flex: 1;
             flex: 1;
           }
-          .kt-widget25 .kt-widget25__items .kt-widget25__item .kt-widget25__progress-sub {
+          .kt-widget25
+            .kt-widget25__items
+            .kt-widget25__item
+            .kt-widget25__progress-sub {
             display: inline-block;
             margin-top: 6px;
             font-size: 1.1rem;
             font-weight: 500;
           }
-          .kt-widget25 .kt-widget25__items .kt-widget25__item .kt-widget25__number {
+          .kt-widget25
+            .kt-widget25__items
+            .kt-widget25__item
+            .kt-widget25__number {
             font-size: 2rem;
             font-weight: 600;
           }
           .kt-widget25 .kt-widget25__items .kt-widget25__item .progress {
             height: 0.5rem;
           }
-          .kt-widget25 .kt-widget25__items .kt-widget25__item .kt-widget25__desc {
+          .kt-widget25
+            .kt-widget25__items
+            .kt-widget25__item
+            .kt-widget25__desc {
             font-size: 1.1rem;
             font-weight: 500;
             color: #74788d;
@@ -4420,7 +4658,7 @@ class Kiosk extends Component {
             .kt-widget25__item:not(:first-child):not(:last-child) {
             margin: 0 2rem;
           }
-          
+
           .kt-widget26 {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -4463,7 +4701,7 @@ class Kiosk extends Component {
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
           }
-          
+
           .kt-widget27 {
             border-top-left-radius: 4px;
             border-top-right-radius: 4px;
@@ -4542,7 +4780,10 @@ class Kiosk extends Component {
           .kt-widget27 .kt-widget27__container .tab-content {
             padding: 0 1rem;
           }
-          .kt-widget27 .kt-widget27__container .tab-content .kt-widget27__header {
+          .kt-widget27
+            .kt-widget27__container
+            .tab-content
+            .kt-widget27__header {
             padding: 1.1rem 0;
             margin-bottom: 0.5rem;
           }
@@ -4599,7 +4840,10 @@ class Kiosk extends Component {
             border-radius: 1.1rem;
             margin: 0 1rem 0.1rem 0;
           }
-          .kt-widget27 .kt-widget27__container .tab-content .kt-widget27__chart {
+          .kt-widget27
+            .kt-widget27__container
+            .tab-content
+            .kt-widget27__chart {
             position: relative;
             display: -webkit-box;
             display: -ms-flexbox;
@@ -4638,11 +4882,15 @@ class Kiosk extends Component {
             font-weight: 500;
             color: #74788d;
           }
-          .kt-widget27 .kt-widget27__container .tab-content .kt-widget27__chart canvas {
+          .kt-widget27
+            .kt-widget27__container
+            .tab-content
+            .kt-widget27__chart
+            canvas {
             position: relative;
             z-index: 1;
           }
-          
+
           .kt-widget28 .kt-widget28__visual {
             position: relative;
             min-height: 286px;
@@ -4651,7 +4899,7 @@ class Kiosk extends Component {
             border-top-left-radius: 4px;
             border-top-right-radius: 4px;
           }
-          
+
           .kt-widget28 .kt-widget28__wrapper {
             width: 100%;
           }
@@ -4687,7 +4935,12 @@ class Kiosk extends Component {
             padding-bottom: 1rem;
             padding-top: 0.4rem;
           }
-          .kt-widget28 .kt-widget28__wrapper .nav .nav-item > a > span:last-child {
+          .kt-widget28
+            .kt-widget28__wrapper
+            .nav
+            .nav-item
+            > a
+            > span:last-child {
             font-weight: 400;
             font-size: 1rem;
           }
@@ -4700,7 +4953,13 @@ class Kiosk extends Component {
             -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease;
           }
-          .kt-widget28 .kt-widget28__wrapper .nav .nav-item > a.active > span > i {
+          .kt-widget28
+            .kt-widget28__wrapper
+            .nav
+            .nav-item
+            > a.active
+            > span
+            > i {
             color: #fff;
             -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease;
@@ -4717,9 +4976,27 @@ class Kiosk extends Component {
             -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease;
           }
-          .kt-widget28 .kt-widget28__wrapper .nav .nav-item > a:focus > span > i,
-          .kt-widget28 .kt-widget28__wrapper .nav .nav-item > a:active > span > i,
-          .kt-widget28 .kt-widget28__wrapper .nav .nav-item > a:hover > span > i {
+          .kt-widget28
+            .kt-widget28__wrapper
+            .nav
+            .nav-item
+            > a:focus
+            > span
+            > i,
+          .kt-widget28
+            .kt-widget28__wrapper
+            .nav
+            .nav-item
+            > a:active
+            > span
+            > i,
+          .kt-widget28
+            .kt-widget28__wrapper
+            .nav
+            .nav-item
+            > a:hover
+            > span
+            > i {
             color: #fff;
             -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease;
@@ -4784,7 +5061,7 @@ class Kiosk extends Component {
             .kt-widget28__tab-item:last-child {
             border-bottom: none;
           }
-          
+
           .kt-widget29 {
             margin-top: 1rem;
           }
@@ -4803,7 +5080,10 @@ class Kiosk extends Component {
             display: -ms-flexbox;
             display: flex;
           }
-          .kt-widget29 .kt-widget29__content .kt-widget29__item .kt-widget29__info {
+          .kt-widget29
+            .kt-widget29__content
+            .kt-widget29__item
+            .kt-widget29__info {
             -webkit-box-flex: 1;
             -ms-flex: 1;
             flex: 1;
@@ -4836,7 +5116,7 @@ class Kiosk extends Component {
             margin-top: 1.5rem;
             padding: 0rem;
           }
-          
+
           @media (max-width: 768px) {
             .kt-widget29 .kt-widget29__content {
               padding: 2.2rem 1rem;
@@ -4856,7 +5136,7 @@ class Kiosk extends Component {
               padding-right: 0;
             }
           }
-          
+
           .kt-widget30 {
             margin: 1.5rem 0;
           }
@@ -4877,12 +5157,20 @@ class Kiosk extends Component {
           .kt-widget30 .kt-widget30__head .owl-carousel .carousel > span {
             display: block;
           }
-          .kt-widget30 .kt-widget30__head .owl-carousel .carousel > span:first-child {
+          .kt-widget30
+            .kt-widget30__head
+            .owl-carousel
+            .carousel
+            > span:first-child {
             font-size: 1.1rem;
             font-weight: 500;
             color: #595d6e;
           }
-          .kt-widget30 .kt-widget30__head .owl-carousel .carousel > span:last-child {
+          .kt-widget30
+            .kt-widget30__head
+            .owl-carousel
+            .carousel
+            > span:last-child {
             font-size: 0.9rem;
             font-weight: 400;
             color: #74788d;
@@ -4893,10 +5181,20 @@ class Kiosk extends Component {
             -webkit-box-shadow: 0px 2px 14px 2px rgba(34, 185, 255, 0.2);
             box-shadow: 0px 2px 14px 2px rgba(34, 185, 255, 0.2);
           }
-          .kt-widget30 .kt-widget30__head .owl-carousel .center > div > span:first-child {
+          .kt-widget30
+            .kt-widget30__head
+            .owl-carousel
+            .center
+            > div
+            > span:first-child {
             color: #ffffff;
           }
-          .kt-widget30 .kt-widget30__head .owl-carousel .center > div > span:last-child {
+          .kt-widget30
+            .kt-widget30__head
+            .owl-carousel
+            .center
+            > div
+            > span:last-child {
             color: rgba(255, 255, 255, 0.7);
           }
           .kt-widget30 .kt-widget30__body .owl-carousel .kt-widget30__items {
@@ -4987,16 +5285,19 @@ class Kiosk extends Component {
             .kt-widget30__item:last-child {
             border-bottom: none;
           }
-          .kt-widget30 .kt-widget30__body .owl-carousel .kt-widget30__items:last-child {
+          .kt-widget30
+            .kt-widget30__body
+            .owl-carousel
+            .kt-widget30__items:last-child {
             border-bottom: none;
           }
-          
+
           @media (max-width: 1024px) {
             .kt-widget30 {
               margin: 1rem 0;
             }
           }
-          
+
           .kt-widget31 .kt-widget31__item {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -5020,11 +5321,18 @@ class Kiosk extends Component {
             -ms-flex-align: center;
             align-items: center;
           }
-          .kt-widget31 .kt-widget31__item .kt-widget31__content .kt-widget31__pic > img {
+          .kt-widget31
+            .kt-widget31__item
+            .kt-widget31__content
+            .kt-widget31__pic
+            > img {
             width: 4rem;
             border-radius: 50%;
           }
-          .kt-widget31 .kt-widget31__item .kt-widget31__content .kt-widget31__info {
+          .kt-widget31
+            .kt-widget31__item
+            .kt-widget31__content
+            .kt-widget31__info {
             padding: 0 1.2rem;
             -webkit-box-flex: 1;
             -ms-flex-positive: 1;
@@ -5060,7 +5368,10 @@ class Kiosk extends Component {
             font-weight: 400;
             color: #74788d;
           }
-          .kt-widget31 .kt-widget31__item .kt-widget31__content .kt-widget31__progress {
+          .kt-widget31
+            .kt-widget31__item
+            .kt-widget31__content
+            .kt-widget31__progress {
             -webkit-box-flex: 1;
             -ms-flex: 1;
             flex: 1;
@@ -5132,7 +5443,7 @@ class Kiosk extends Component {
           .kt-widget31 .kt-widget31__item:last-child {
             margin-bottom: 0;
           }
-          
+
           @media (max-width: 768px) {
             .kt-widget31 .kt-widget31__item {
               display: -webkit-box;
@@ -5149,7 +5460,7 @@ class Kiosk extends Component {
               margin: 1rem 0;
             }
           }
-          
+
           .kt-widget__files .kt-widget__media {
             text-align: center;
           }
@@ -5168,7 +5479,7 @@ class Kiosk extends Component {
             width: 4rem;
             height: 4rem;
           }
-          
+
           .kt-widget__files .kt-widget__desc {
             text-align: center;
             display: block;
@@ -5186,7 +5497,7 @@ class Kiosk extends Component {
             padding-top: 1rem;
             margin-bottom: 4rem;
           }
-          
+
           .kt-widget33 .kt-widget33__head {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -5209,7 +5520,7 @@ class Kiosk extends Component {
             -webkit-transition: all 0.3s ease;
             transition: all 0.3s ease;
           }
-          
+
           .kt-widget33 .kt-widget33__body .kt-widget33__title {
             font-size: 1.4rem;
             font-weight: 600;
@@ -5220,14 +5531,17 @@ class Kiosk extends Component {
             -webkit-transition: all 0.3s ease;
             transition: all 0.3s ease;
           }
-          
+
           .kt-widget33 .kt-widget33__body .kt-widget33__desc {
             display: block;
             font-weight: 500;
             color: #74788d;
           }
-          
-          .kt-widget33 .kt-widget33__body .kt-widget33__items .kt-widget33__item {
+
+          .kt-widget33
+            .kt-widget33__body
+            .kt-widget33__items
+            .kt-widget33__item {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -5345,7 +5659,7 @@ class Kiosk extends Component {
             .kt-widget33__item:last-child {
             border-bottom: none;
           }
-          
+
           .kt-widget33 .kt-widget33__foot .kt-widget33__section {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -5358,17 +5672,23 @@ class Kiosk extends Component {
             align-items: center;
             margin-bottom: 2rem;
           }
-          .kt-widget33 .kt-widget33__foot .kt-widget33__section .kt-widget33__desc {
+          .kt-widget33
+            .kt-widget33__foot
+            .kt-widget33__section
+            .kt-widget33__desc {
             font-weight: 600;
             font-size: 1.2rem;
             color: #48465b;
           }
-          .kt-widget33 .kt-widget33__foot .kt-widget33__section .kt-widget33__subtotal {
+          .kt-widget33
+            .kt-widget33__foot
+            .kt-widget33__section
+            .kt-widget33__subtotal {
             font-weight: 600;
             color: #48465b;
             font-size: 1.2rem;
           }
-          
+
           .kt-widget33 .kt-widget33__foot .kt-widget33__button {
             text-align: center;
           }
@@ -5376,7 +5696,7 @@ class Kiosk extends Component {
             width: 100%;
             padding: 1rem 0;
           }
-          
+
           .kt-widget.kt-widget--user-profile-1 {
             padding-bottom: 1.7rem;
           }
@@ -5388,12 +5708,17 @@ class Kiosk extends Component {
             -ms-flex-align: start;
             align-items: flex-start;
           }
-          .kt-widget.kt-widget--user-profile-1 .kt-widget__head .kt-widget__media img {
+          .kt-widget.kt-widget--user-profile-1
+            .kt-widget__head
+            .kt-widget__media
+            img {
             width: 90px;
             max-width: 100%;
             border-radius: 8px;
           }
-          .kt-widget.kt-widget--user-profile-1 .kt-widget__head .kt-widget__content {
+          .kt-widget.kt-widget--user-profile-1
+            .kt-widget__head
+            .kt-widget__content {
             padding-left: 1.6rem;
           }
           .kt-widget.kt-widget--user-profile-1
@@ -5449,7 +5774,9 @@ class Kiosk extends Component {
             font-weight: 600;
             padding: 0.3rem 1rem;
           }
-          .kt-widget.kt-widget--user-profile-1 .kt-widget__body .kt-widget__content {
+          .kt-widget.kt-widget--user-profile-1
+            .kt-widget__body
+            .kt-widget__content {
             padding: 1.9rem 0 2.1rem 0;
           }
           .kt-widget.kt-widget--user-profile-1
@@ -5600,16 +5927,19 @@ class Kiosk extends Component {
             [fill] {
             fill: #22b9ff;
           }
-          
+
           .kt-portlet__body.kt-portlet__body--fit-y .kt-widget {
             margin-top: -10px;
           }
-          
+
           @media (max-width: 1024px) {
             .kt-widget.kt-widget--user-profile-1 {
               padding-bottom: 1.2rem;
             }
-            .kt-widget.kt-widget--user-profile-1 .kt-widget__head .kt-widget__media img {
+            .kt-widget.kt-widget--user-profile-1
+              .kt-widget__head
+              .kt-widget__media
+              img {
               max-width: 60px;
             }
             .kt-widget.kt-widget--user-profile-1
@@ -5636,11 +5966,13 @@ class Kiosk extends Component {
               font-weight: 500;
               padding: 0.25rem 1.25rem;
             }
-            .kt-widget.kt-widget--user-profile-1 .kt-widget__body .kt-widget__content {
+            .kt-widget.kt-widget--user-profile-1
+              .kt-widget__body
+              .kt-widget__content {
               padding-bottom: 2rem;
             }
           }
-          
+
           .kt-widget.kt-widget--user-profile-2 {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -5736,7 +6068,9 @@ class Kiosk extends Component {
             .kt-widget__pic.kt-widget__pic--danger {
             background: rgba(253, 39, 235, 0.1);
           }
-          .kt-widget.kt-widget--user-profile-2 .kt-widget__head .kt-widget__info {
+          .kt-widget.kt-widget--user-profile-2
+            .kt-widget__head
+            .kt-widget__info {
             padding-left: 1rem;
           }
           .kt-widget.kt-widget--user-profile-2
@@ -5786,15 +6120,22 @@ class Kiosk extends Component {
             -ms-flex: 1;
             flex: 1;
           }
-          .kt-widget.kt-widget--user-profile-2 .kt-widget__body .kt-widget__section {
+          .kt-widget.kt-widget--user-profile-2
+            .kt-widget__body
+            .kt-widget__section {
             padding: 1rem 0 1rem 0;
             color: #595d6e;
             font-weight: 400;
           }
-          .kt-widget.kt-widget--user-profile-2 .kt-widget__body .kt-widget__section a {
+          .kt-widget.kt-widget--user-profile-2
+            .kt-widget__body
+            .kt-widget__section
+            a {
             padding-right: 0.3rem;
           }
-          .kt-widget.kt-widget--user-profile-2 .kt-widget__body .kt-widget__content {
+          .kt-widget.kt-widget--user-profile-2
+            .kt-widget__body
+            .kt-widget__content {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -5853,7 +6194,9 @@ class Kiosk extends Component {
             font-weight: 600;
             font-size: 1.2rem;
           }
-          .kt-widget.kt-widget--user-profile-2 .kt-widget__body .kt-widget__item {
+          .kt-widget.kt-widget--user-profile-2
+            .kt-widget__body
+            .kt-widget__item {
             padding: 0.7rem 0;
           }
           .kt-widget.kt-widget--user-profile-2
@@ -5911,7 +6254,7 @@ class Kiosk extends Component {
             padding: 1.1rem 0;
             width: 100%;
           }
-          
+
           @media (max-width: 768px) {
             .kt-widget.kt-widget--user-profile-2 .kt-widget__head {
               margin-top: -30px;
@@ -5931,7 +6274,7 @@ class Kiosk extends Component {
               font-size: 1.2rem;
             }
           }
-          
+
           .kt-widget.kt-widget--user-profile-3 .kt-widget__top {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -5940,10 +6283,15 @@ class Kiosk extends Component {
             -ms-flex-align: start;
             align-items: flex-start;
           }
-          .kt-widget.kt-widget--user-profile-3 .kt-widget__top .kt-widget__media {
+          .kt-widget.kt-widget--user-profile-3
+            .kt-widget__top
+            .kt-widget__media {
             margin-top: 0.2rem;
           }
-          .kt-widget.kt-widget--user-profile-3 .kt-widget__top .kt-widget__media img {
+          .kt-widget.kt-widget--user-profile-3
+            .kt-widget__top
+            .kt-widget__media
+            img {
             width: 110px;
             border-radius: 8px;
           }
@@ -6004,7 +6352,9 @@ class Kiosk extends Component {
             .kt-widget__pic.kt-widget__pic--danger {
             background: rgba(253, 39, 235, 0.1);
           }
-          .kt-widget.kt-widget--user-profile-3 .kt-widget__top .kt-widget__content {
+          .kt-widget.kt-widget--user-profile-3
+            .kt-widget__top
+            .kt-widget__content {
             width: 100%;
             padding-left: 1.7rem;
           }
@@ -6270,7 +6620,7 @@ class Kiosk extends Component {
             .kt-widget__item:last-child {
             padding-left: 1rem;
           }
-          
+
           .kt-widget.kt-widget--user-profile-3 .kt-widget__bottom {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -6284,7 +6634,9 @@ class Kiosk extends Component {
             border-top: 1px solid #ebedf2;
             margin-top: 2rem;
           }
-          .kt-widget.kt-widget--user-profile-3 .kt-widget__bottom .kt-widget__item {
+          .kt-widget.kt-widget--user-profile-3
+            .kt-widget__bottom
+            .kt-widget__item {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -6361,11 +6713,11 @@ class Kiosk extends Component {
             .kt-section__content {
             padding-left: 0.7rem;
           }
-          
+
           .kt-widget.kt-widget--user-profile-3 .kt-widget__form {
             margin-top: 1.5rem;
           }
-          
+
           @media (max-width: 768px) {
             .kt-widget.kt-widget--user-profile-3 {
               padding-top: 0.5rem;
@@ -6378,19 +6730,28 @@ class Kiosk extends Component {
               -ms-flex-align: start;
               align-items: flex-start;
             }
-            .kt-widget.kt-widget--user-profile-3 .kt-widget__top .kt-widget__media {
+            .kt-widget.kt-widget--user-profile-3
+              .kt-widget__top
+              .kt-widget__media {
               margin-top: 0.5rem;
             }
-            .kt-widget.kt-widget--user-profile-3 .kt-widget__top .kt-widget__media img {
+            .kt-widget.kt-widget--user-profile-3
+              .kt-widget__top
+              .kt-widget__media
+              img {
               max-width: 60px;
             }
-            .kt-widget.kt-widget--user-profile-3 .kt-widget__top .kt-widget__pic {
+            .kt-widget.kt-widget--user-profile-3
+              .kt-widget__top
+              .kt-widget__pic {
               width: 60px;
               height: 60px;
               margin-top: 0.5rem;
               font-size: 1.3rem;
             }
-            .kt-widget.kt-widget--user-profile-3 .kt-widget__top .kt-widget__content {
+            .kt-widget.kt-widget--user-profile-3
+              .kt-widget__top
+              .kt-widget__content {
               padding-left: 1rem;
               margin-top: 0;
             }
@@ -6443,7 +6804,9 @@ class Kiosk extends Component {
             .kt-widget.kt-widget--user-profile-3 .kt-widget__bottom {
               padding-top: 1rem;
             }
-            .kt-widget.kt-widget--user-profile-3 .kt-widget__bottom .kt-widget__item {
+            .kt-widget.kt-widget--user-profile-3
+              .kt-widget__bottom
+              .kt-widget__item {
               padding: 1rem 1rem 0 0;
             }
             .kt-widget.kt-widget--user-profile-3
@@ -6454,11 +6817,13 @@ class Kiosk extends Component {
               font-size: 2.5rem;
             }
           }
-          
+
           .kt-widget.kt-widget--user-profile-4 .kt-widget__head {
             margin-top: 1rem;
           }
-          .kt-widget.kt-widget--user-profile-4 .kt-widget__head .kt-widget__media {
+          .kt-widget.kt-widget--user-profile-4
+            .kt-widget__head
+            .kt-widget__media {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -6601,11 +6966,13 @@ class Kiosk extends Component {
             .btn:not(:first-child):not(:last-child) {
             margin: 0 1rem;
           }
-          
+
           .kt-widget.kt-widget--user-profile-4 .kt-widget__body {
             margin-top: 2.5rem;
           }
-          .kt-widget.kt-widget--user-profile-4 .kt-widget__body .kt-widget__item {
+          .kt-widget.kt-widget--user-profile-4
+            .kt-widget__body
+            .kt-widget__item {
             display: block;
             text-align: center;
             color: #595d6e;
@@ -6614,7 +6981,9 @@ class Kiosk extends Component {
             padding: 0.9rem 0;
             margin: 0.4rem 0;
           }
-          .kt-widget.kt-widget--user-profile-4 .kt-widget__body .kt-widget__item:hover {
+          .kt-widget.kt-widget--user-profile-4
+            .kt-widget__body
+            .kt-widget__item:hover {
             color: #22b9ff;
             -webkit-transition: color 0.3s ease;
             transition: color 0.3s ease;
@@ -6631,7 +7000,7 @@ class Kiosk extends Component {
             color: #22b9ff;
             border-radius: 4px;
           }
-          
+
           @media (max-width: 768px) {
             .kt-widget.kt-widget--user-profile-4
               .kt-widget__head
@@ -6649,7 +7018,7 @@ class Kiosk extends Component {
               font-size: 1.2rem;
             }
           }
-          
+
           .kt-widget.kt-widget--users .kt-widget__item {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -6707,7 +7076,10 @@ class Kiosk extends Component {
             .kt-badge {
             margin-left: 0.5rem;
           }
-          .kt-widget.kt-widget--users .kt-widget__item .kt-widget__info .kt-widget__desc {
+          .kt-widget.kt-widget--users
+            .kt-widget__item
+            .kt-widget__info
+            .kt-widget__desc {
             display: block;
             color: #74788d;
             font-weight: 500;
@@ -6727,7 +7099,7 @@ class Kiosk extends Component {
             color: #74788d;
             font-weight: 500;
           }
-          
+
           @media (max-width: 1024px) {
             .kt-widget.kt-widget--users .kt-widget__item .kt-widget__info {
               -webkit-box-flex: 1.5;
@@ -6740,7 +7112,7 @@ class Kiosk extends Component {
               flex: 1;
             }
           }
-          
+
           .kt-widget.kt-widget--project-1 {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -6901,7 +7273,9 @@ class Kiosk extends Component {
             .kt-widget__item:last-child {
             padding-left: 1rem;
           }
-          .kt-widget.kt-widget--project-1 .kt-widget__body .kt-widget__container {
+          .kt-widget.kt-widget--project-1
+            .kt-widget__body
+            .kt-widget__container {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -7018,7 +7392,9 @@ class Kiosk extends Component {
             border-top: 1px solid #ebedf2;
             width: 100%;
           }
-          .kt-widget.kt-widget--project-1 .kt-widget__footer .kt-widget__wrapper {
+          .kt-widget.kt-widget--project-1
+            .kt-widget__footer
+            .kt-widget__wrapper {
             padding: 25px;
             display: -webkit-box;
             display: -ms-flexbox;
@@ -7080,7 +7456,7 @@ class Kiosk extends Component {
             .kt-widget__blog:last-child {
             padding-left: 1.7rem;
           }
-          
+
           @media (max-width: 1024px) {
             .kt-widget.kt-widget--project-1 .kt-widget__head {
               padding-bottom: 1rem;
@@ -7203,7 +7579,9 @@ class Kiosk extends Component {
               margin-top: 1.5rem;
               margin-bottom: 1rem;
             }
-            .kt-widget.kt-widget--project-1 .kt-widget__body .kt-widget__content {
+            .kt-widget.kt-widget--project-1
+              .kt-widget__body
+              .kt-widget__content {
               padding: 0.5rem 0 1rem 0;
             }
             .kt-widget.kt-widget--project-1
@@ -7225,7 +7603,9 @@ class Kiosk extends Component {
               .kt-widget__subtitle {
               margin-top: 0rem;
             }
-            .kt-widget.kt-widget--project-1 .kt-widget__footer .kt-widget__wrapper {
+            .kt-widget.kt-widget--project-1
+              .kt-widget__footer
+              .kt-widget__wrapper {
               padding: 15px;
             }
             .kt-widget.kt-widget--project-1
@@ -7251,15 +7631,18 @@ class Kiosk extends Component {
             }
           }
           /*  */
-          
-          .kt-portlet .kt-portlet__head .kt-portlet__head-label .kt-portlet__head-title {
+
+          .kt-portlet
+            .kt-portlet__head
+            .kt-portlet__head-label
+            .kt-portlet__head-title {
             margin: 0;
             padding: 0;
             font-size: 1.2rem;
             font-weight: 500;
             color: #48465b;
           }
-          
+
           .row.box-container {
             display: -webkit-box;
             display: -ms-flexbox;
