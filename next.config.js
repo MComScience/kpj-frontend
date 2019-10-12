@@ -4,6 +4,7 @@ const isProd = process.env.NODE_ENV === "production"
 
 /* Modules */
 module.exports = withImages()
+module.exports = withCSS()
 /* module.exports = withCSS({
   distDir: "build",
   // cssModules: true,
