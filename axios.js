@@ -2,7 +2,7 @@ import axios from "axios"
 import { loadState } from './utils'
 
 const instance = axios.create({
-  baseURL: "http://192.168.1.2:3000/v1/" //'http://queue-udh-api.local/v1/'
+  baseURL: "http://192.168.1.13:8081/v1/" //'http://queue-udh-api.local/v1/'
 })
 instance.CancelToken = axios.CancelToken
 instance.isCancel = axios.isCancel
