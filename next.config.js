@@ -46,11 +46,11 @@ module.exports = withCSS({
         use: "null-loader"
       })
     }
-    if (!isServer) {
-      config.node = {
-        fs: 'empty'
-      }
-    }
+    // if (!isServer) {
+    //   config.node = {
+    //     fs: 'empty'
+    //   }
+    // }
     config.module.rules.push({
       test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
       use: {
