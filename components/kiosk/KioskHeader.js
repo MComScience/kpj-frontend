@@ -6,7 +6,7 @@ const KioskHeader = props => {
   return (
     <header className="main-header">
       <Link href="/">
-        <a href="#" className="logo">
+        <a className="logo">
           {/* mini logo for sidebar mini 50x50 pixels */}
           <span className="logo-mini hidden-lg hidden-md">
             <b>KPJ</b>
