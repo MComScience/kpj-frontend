@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import Aux from "../../hoc/Auxiliary"
+import logo from "../../static/images/kpj-logo.png"
 
 const KioskPrintTemplate = props => {
   return (
@@ -22,7 +23,7 @@ const KioskPrintTemplate = props => {
               <img
                 alt="logo"
                 className="center-block"
-                src="/static/images/kpj-logo.png"
+                src={logo}
                 style={{
                   display: "block",
                   marginLeft: "auto",

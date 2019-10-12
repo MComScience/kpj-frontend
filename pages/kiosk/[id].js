@@ -13,6 +13,7 @@ import KioskForm from "../../components/kiosk/KioskForm"
 import KioskHeader from "../../components/kiosk/KioskHeader"
 import KioskPrintTemplate from "../../components/kiosk/KioskPrintTemplate"
 import Aux from "../../hoc/Auxiliary"
+import boyImg from "../../static/images/boy.png"
 moment.locale("th")
 
 const EVENTS = {
@@ -43,7 +44,7 @@ class Kiosk extends Component {
     currentDate: moment().format("วันddddที่ DD MMMM YYYY"),
     printDate: moment().format("DD MMMM YYYY"),
     printTime: moment().format("HH:mm น."),
-    socket: io.connect("http://192.168.1.2:3000")
+    socket: io.connect(process.env.SOCKET_HOST)
   }
 
   componentDidMount() {
@@ -277,7 +278,7 @@ class Kiosk extends Component {
     if (this.state.patientInfo) {
       return this.state.patientInfo.photo
     } else {
-      return "/static/images/boy.png"
+      return boyImg
     }
   }
 

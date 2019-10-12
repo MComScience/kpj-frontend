@@ -1,6 +1,7 @@
 import { Button, Icon, Input, Spin } from "antd"
 import classNames from "classnames"
 import PropTypes from "prop-types"
+import payment2 from "../../static/images/payment2.png"
 import Modal from "../Modal"
 import Numpad from "../Numpad"
 
@@ -113,7 +114,7 @@ const KioskForm = props => {
           <div className="col-sm-4"></div>
           <div className="col-sm-4 faa-vertical animated">
             <img
-              src="/static/images/payment2.png"
+              src={payment2}
               alt="image"
               className="img-responsive center-block"
             />

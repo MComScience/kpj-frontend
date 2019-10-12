@@ -5,6 +5,7 @@ import Swal from "sweetalert2"
 import axios from "../../axios"
 import Layout from "../../components/layout"
 import Aux from "../../hoc/Auxiliary"
+import kioskImg from "../../static/images/kiosk_02.png"
 
 class List extends Component {
   state = {
@@ -22,7 +23,7 @@ class List extends Component {
       const { data } = await axios.get(`/kiosk/index`)
       this.setState({ kiosks: data, loading: false })
     } catch (error) {
-      this.setState({ loading: true })
+      this.setState({ loading: false })
       Swal.fire({
         type: "error",
         title: "Oops...",
@@ -38,10 +39,8 @@ class List extends Component {
           <a className="product_nav ">
             <div className="block-media">
               <img
-                src="/static/images/kiosk_02.png"
-                className="img-fluid media lozad"
-                data-src="/static/images/kiosk_02.png"
-                data-loaded="true"
+                src={kioskImg}
+                alt="image"
               />
             </div>
             <p className="hoveraction_blockmedia_p">

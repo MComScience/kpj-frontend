@@ -6,6 +6,11 @@ import { Provider } from 'react-redux'
 import { persistStore } from 'redux-persist'
 import { PersistGate } from 'redux-persist/integration/react'
 import withReduxStore from '../lib/redux-store'
+import "../static/dist/css/AdminLTE.min.css"
+import "../static/dist/css/bootstrap.min.css"
+import "../static/dist/css/skins/_all-skins.min.css"
+import "../static/font-awesome/css/font-awesome.min.css"
+import "../static/Ionicons/css/ionicons.min.css"
 import "../static/nprogress.css"
 import { authCheckState } from '../store/actions'
 

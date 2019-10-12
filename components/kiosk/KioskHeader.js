@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PropTypes from 'prop-types';
+import logo from "../../static/images/kpj-logo.png";
 
 const KioskHeader = props => {
   return (
@@ -16,7 +17,7 @@ const KioskHeader = props => {
           </span>
           <span className="logo-app">
             <img
-              src="/static/images/kpj-logo.png"
+              src={logo}
               className="img-responsive center-block"
               alt="logo"
             />

@@ -19,22 +19,8 @@ const Head = props => (
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
       name="viewport"
     />
-    <link
-      rel="stylesheet"
-      href="/static/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/static/font-awesome/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/static/Ionicons/css/ionicons.min.css"
-    />
     <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
-    <link rel="stylesheet" href="/static/dist/css/AdminLTE.min.css" />
-    <link rel="stylesheet" href="/static/dist/css/skins/_all-skins.min.css" />
     <link rel="icon" sizes="192x192" href="/static/touch-icon.png" />
     <link rel="apple-touch-icon" href="/static/touch-icon.png" />
     <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882" />

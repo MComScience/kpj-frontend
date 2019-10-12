@@ -20,6 +20,9 @@ module.exports = withImages()
 
 module.exports = withCSS({
   distDir: "build",
+  env: {
+    SOCKET_HOST: "http://192.168.1.13:3000"
+  },
   // cssModules: true,
   // assetPrefix: isProd ? "http://192.168.1.13" : "",
   webpack: (config, { isServer }) => {
@@ -46,6 +49,16 @@ module.exports = withCSS({
     config.node = {
       fs: "empty"
     }
+    config.module.rules.push({
+      test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+      use: {
+        loader: "url-loader",
+        options: {
+          limit: 100000,
+          name: "[name].[ext]"
+        }
+      }
+    })
     return config
   }
 })
