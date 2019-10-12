@@ -38,10 +38,7 @@ class List extends Component {
         <Link href={`/kiosk/[id]`} as={`/kiosk/${kiosk.kiosk_id}`}>
           <a className="product_nav ">
             <div className="block-media">
-              <img
-                src={kioskImg}
-                alt="image"
-              />
+              <img src={kioskImg} alt="image" />
             </div>
             <p className="hoveraction_blockmedia_p">
               {kiosk.kiosk_name} <span className="second-line " />
@@ -83,6 +80,9 @@ class List extends Component {
           </div>
 
           <style global jsx>{`
+            .block-media img {
+              max-width: 112px;
+            }
             .loading {
               display: flex;
               justify-content: center;
