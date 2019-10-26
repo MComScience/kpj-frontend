@@ -57,6 +57,9 @@ const KioskPrintTemplate = props => {
               <strong>สิทธิการรักษา</strong>
             </p>
             <p style={{ textAlign: "center" }}>
+              <strong> {props.getValueRight("hmain_name")} </strong>
+            </p>
+            <p style={{ textAlign: "center" }}>
               <input defaultChecked="checked" type="checkbox" />
               <strong> {props.getValueRight("maininscl_name")} </strong>
             </p>
