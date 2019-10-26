@@ -22,7 +22,10 @@ module.exports = withCSS()
 module.exports = withCSS({
   distDir: "build",
   env: {
-    SOCKET_HOST: "http://10.0.6.255:3000"
+    SOCKET_HOST: isProd ? "http://10.0.6.255:3000" : "http://localhost:3000"
+  },
+  devIndicators: {
+    autoPrerender: false,
   },
   // cssModules: true,
   // assetPrefix: isProd ? "http://192.168.1.13" : "",

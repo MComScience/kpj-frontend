@@ -353,7 +353,6 @@ class Index extends Component {
               )}
             </Formik>
           </Modal>
-          <style jsx global>{``}</style>
         </Layout>
       </Aux>
     )

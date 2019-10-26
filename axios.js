@@ -1,8 +1,9 @@
 import axios from "axios"
 import { loadState } from './utils'
+const isDev = process.env.NODE_ENV === 'development'
 
 const instance = axios.create({
-  baseURL: "http://10.0.6.255:8081/v1/" //'http://queue-udh-api.local/v1/'
+  baseURL: isDev ? 'http://localhost:3000/v1/' : "http://10.0.6.255:8081/v1/" //'http://queue-udh-api.local/v1/'
 })
 instance.CancelToken = axios.CancelToken
 instance.isCancel = axios.isCancel

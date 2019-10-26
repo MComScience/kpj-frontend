@@ -35,7 +35,6 @@ export const authCheckState = () => {
           dispatch(checkAuthTimeout(exp))
         }
       } catch (err) {
-        console.log(err)
         setTimeout(() => {
           dispatch(logout())
         }, 500)
