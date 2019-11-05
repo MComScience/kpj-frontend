@@ -334,7 +334,7 @@ class Kiosk extends Component {
         // window.close()
       }
       await new Promise(resolve => {
-        window.close()
+        // window.close()
         setTimeout(resolve, 1000)
       })
       _this.onClearState()
