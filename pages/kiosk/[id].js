@@ -325,7 +325,7 @@ class Kiosk extends Component {
         printTime: moment().format("HH:mm น.")
       })
       await new Promise(resolve => {
-        setTimeout(resolve, 300)
+        setTimeout(resolve, 1500)
       })
       window.print()
       window.onafterprint = function() {
@@ -334,6 +334,7 @@ class Kiosk extends Component {
         // window.close()
       }
       await new Promise(resolve => {
+        window.close()
         setTimeout(resolve, 1000)
       })
       _this.onClearState()
